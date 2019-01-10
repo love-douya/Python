@@ -1,0 +1,1 @@
+from test.test1.module2 import lalala
