@@ -14,27 +14,27 @@ import re
 # mo1 = greedyHaRegex.search('HaHaHaHaHa')
 # print(mo1.group())
 
-# import pyperclip
+import pyperclip
 
-# emailRegex = re.compile(r'''(
-#     [a-zA-Z0-9._%+-]+ # username
-#     @                 # @ symbol
-#     [a-zA-Z0-9.-]+    # domain name
-#     (\.[a-zA-Z]{2,4}) # dot-something
-# )''', re.VERBOSE)
+emailRegex = re.compile(r'''(
+    [a-zA-Z0-9._%+-]+ # username
+    @                 # @ symbol
+    [a-zA-Z0-9.-]+    # domain name
+    (\.[a-zA-Z]{2,4}) # dot-something
+)''', re.VERBOSE)
 
-# text = str(pyperclip.paste())
-# match = []
+text = str(pyperclip.paste())
+match = []
 
-# for groups in emailRegex.findall(text):
-#     match.append(groups[0])
+for groups in emailRegex.findall(text):
+    match.append(groups[0])
 
-# # Copy results to the clipboard.
-# if len(match) > 0:
-#     pyperclip.copy('\n'.join(match))
-#     print('Copied to clipboard:')
-#     print('\n'.join(match))
-# else:
-#     print('No phone numbers or email addresses found.')
+# Copy results to the clipboard.
+if len(match) > 0:
+    pyperclip.copy('\n'.join(match))
+    print('Copied to clipboard:')
+    print('\n'.join(match))
+else:   
+    print('No phone numbers or email addresses found.')
 
 
