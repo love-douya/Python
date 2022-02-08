@@ -1,6 +1,6 @@
 class ExampleCommand():
 	def run(self):
-		print("Hello WOrld!")
+		print("Hello world!")
 	
 
 if __name__ == '__main__':
